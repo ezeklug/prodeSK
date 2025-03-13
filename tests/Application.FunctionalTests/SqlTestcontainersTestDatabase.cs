@@ -44,8 +44,10 @@ public class SqlTestcontainersTestDatabase : ITestDatabase
 
         var context = new ApplicationDbContext(options);
 
-        await context.Database.MigrateAsync();
-
+        if (context.Database.GetPendingMigrations().Any())
+        {
+            await context.Database.MigrateAsync();
+        }
         _respawner = await Respawner.CreateAsync(_connectionString, new RespawnerOptions
         {
             TablesToIgnore = ["__EFMigrationsHistory"]

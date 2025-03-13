@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EstadisticasIndependiente.Domain.Entities
+﻿namespace EstadisticasIndependiente.Domain.Entities
 {
-    public class Estadio
+    public partial class Estadio : BaseAuditableEntity
     {
+        public required string Nombre { get; set; }
+
+        public DateTime? FechaInauguracion { get; set; }
+        public required virtual Equipo Equipo { get; set; }
     }
 }
