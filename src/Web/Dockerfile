@@ -7,6 +7,9 @@ WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
+
+FROM node
+
 USER root
 
 # Instalar curl y Node.js
