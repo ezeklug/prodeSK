@@ -17,4 +17,9 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Partidos\Commands\" />
+    <Folder Include="Pronosticos\Queries\" />
+  </ItemGroup>
+
 </Project>

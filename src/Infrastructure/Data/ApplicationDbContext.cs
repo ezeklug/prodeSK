@@ -16,6 +16,8 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplica
     public DbSet<TodoItem> TodoItems => Set<TodoItem>();
     public DbSet<Estadio> Estadios => Set<Estadio>();
     public DbSet<Equipo> Equipos => Set<Equipo>();
+    public DbSet<Pronostico> Pronosticos => Set<Pronostico>();
+    public DbSet<Partido> Partidos => Set<Partido>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
