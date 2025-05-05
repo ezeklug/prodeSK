@@ -7,7 +7,11 @@ WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - \
+USER root
+
+# Instalar curl y Node.js
+RUN apt-get update && apt-get install -y curl \
+    && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
     && apt-get install -y nodejs
 
 # Esta fase se usa para compilar el proyecto de servicio
