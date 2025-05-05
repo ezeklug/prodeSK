@@ -20,6 +20,9 @@ COPY ["src/Web/Web.csproj", "src/Web/"]
 COPY ["src/Application/Application.csproj", "src/Application/"]
 COPY ["src/Domain/Domain.csproj", "src/Domain/"]
 COPY ["src/Infrastructure/Infrastructure.csproj", "src/Infrastructure/"]
+COPY ["src/Web/package.json", "src/Web/"]
+COPY ["src/Web/package-lock.json", "src/Web/"]
+
 
 RUN dotnet restore "./src/Web/Web.csproj"
 COPY . .
