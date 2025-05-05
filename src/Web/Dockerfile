@@ -7,6 +7,8 @@ WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - \
+    && apt-get install -y nodejs
 
 # Esta fase se usa para compilar el proyecto de servicio
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
