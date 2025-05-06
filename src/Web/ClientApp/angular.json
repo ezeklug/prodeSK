@@ -20,6 +20,7 @@
             "progress": false,
             "outputPath": "dist/prodeSK",
             "index": "src/index.html",
+            "baseHref": "/prodeSK/",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
