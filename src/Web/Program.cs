@@ -17,6 +17,12 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("https://api-prodesk.onrender.com")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
 });
 
 
